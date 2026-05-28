@@ -179,7 +179,7 @@ function buildCentrosHTML() {
         <div style="display:flex;align-items:center;gap:8px">
           <input type="range" id="cc-umbral" min="6" max="36" step="1" value="6"
             oninput="onCentrosUmbralChange(+this.value)"
-            style="width:110px;accent-color:var(--yellow)">
+            style="width:110px;accent-color:var(--accent)">
           <span class="dc-umbral-val" id="cc-umbral-val">≥ 6 meses</span>
         </div>
       </div>
@@ -342,9 +342,10 @@ function injectCentrosStyles() {
   s.textContent = `
 .detalle-controls-bar{display:flex;align-items:flex-end;flex-wrap:wrap;gap:16px;background:var(--surf);border:1px solid var(--border);border-radius:16px;padding:16px 20px;}
 .dc-group{display:flex;flex-direction:column;gap:5px;}
-.dc-label{font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.8px;}
+.dc-label{font-size:10px;color:var(--text);text-transform:uppercase;letter-spacing:.8px;}
 .dc-select{min-width:220px;}
-.dc-umbral-val{font-family:'Space Mono',monospace;font-size:11px;color:var(--yellow);white-space:nowrap;}
+.dc-umbral-val{font-family:'Space Mono',monospace;font-size:11px;color:var(--accent);white-space:nowrap;}
+#cc-umbral{accent-color:var(--accent);}
 @media print{
   body *{visibility:hidden;}
   #centros-print-area,#centros-print-area *{visibility:visible;}
