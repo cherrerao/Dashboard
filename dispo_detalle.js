@@ -206,7 +206,7 @@ function buildDetalleHTML() {
         <label class="dc-label">⚠️ Umbral sobrestock</label>
         <div style="display:flex;align-items:center;gap:8px">
           <input type="range" id="dc-umbral" min="6" max="36" step="1" value="6"
-            oninput="onUmbralChange(+this.value)" style="width:100px;accent-color:var(--yellow)">
+            oninput="onUmbralChange(+this.value)" style="width:100px;accent-color:var(--accent)">
           <span class="dc-umbral-val" id="dc-umbral-val">≥ 6 meses</span>
         </div>
       </div>
@@ -367,7 +367,7 @@ function injectDetalleStyles() {
   border-radius:16px;padding:16px 20px;
 }
 .dc-group{display:flex;flex-direction:column;gap:5px;}
-.dc-label{font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.8px;}
+.dc-label{font-size:10px;color:var(--text);text-transform:uppercase;letter-spacing:.8px;}
 .dc-select{min-width:220px;}
 .dc-segmented{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
 .seg-btn{
@@ -376,7 +376,8 @@ function injectDetalleStyles() {
 }
 .seg-btn:not(:last-child){border-right:1px solid var(--border);}
 .seg-btn.active{background:var(--accent);color:#fff;}
-.dc-umbral-val{font-family:'Space Mono',monospace;font-size:11px;color:var(--yellow);white-space:nowrap;}
+.dc-umbral-val{font-family:'Space Mono',monospace;font-size:11px;color:var(--accent);white-space:nowrap;}
+#dc-umbral{accent-color:var(--accent);}
 
 /* Print styles */
 @media print {
