@@ -455,8 +455,7 @@ function renderCentrosKPIs(rows) {
     { icon:'🟢', lbl:'Normostock',                val: c.NORMOSTOCK||0,         sub: pct(c.NORMOSTOCK),       cls:'c-green'  },
     { icon:'🟡', lbl:`Sobrestock ≥${centrosSobMeses}m`, val: sob,              sub: pct(sob),                cls:'c-yellow' },
     { icon:'🟡', lbl:'Sobrestock Total',          val: c.SOBRESTOCK||0,         sub: pct(c.SOBRESTOCK),       cls:'c-yellow' },
-    { icon:'🟣', lbl:'Sin Rotación',              val: c['SIN ROTACION']||0,    sub: pct(c['SIN ROTACION']),  cls:'c-violet' },
-    { icon:'📍', lbl:'Establecimientos',          val: centrosEstab.length,     sub:'en reporte',             cls:'c-blue'   },
+    { icon:'🟣', lbl:'Sin Rotación',              val: c['SIN ROTACION']||0,    sub: pct(c['SIN ROTACION']),  cls:'c-violet' }
   ];
   document.getElementById('ck-grid').innerHTML = kpis.map(k => `
     <div class="kpi ${k.cls}">
